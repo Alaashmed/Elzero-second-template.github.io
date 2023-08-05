@@ -496,9 +496,8 @@ header nav .fa-bars {
     display: block;
     bottom: 0;
 }
-<<<<<<< HEAD
 
-.portfolio a {
+.portfolio .more a {
     background-color: var(--main-color);
     color: white;
     padding: 13px;
@@ -644,12 +643,148 @@ header nav .fa-bars {
     font-size: 14px;
 }
 
-
 .skills {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
-    
-=======
-    
->>>>>>> 2662944afdfe974d1e35f26984120d79f9cfd51a
+
+.skills .title h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.skills .title p {
+    margin-bottom: 50px;
+}
+
+.skills .container {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.skills .container .card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.skills .container .card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.skills .container .card p {
+    line-height: 1.8;
+}
+
+.skills .test {
+    position: relative;
+}
+
+.skills .test .card hr {
+    height: 0.7px;
+    background-color: #aeaeae;
+    border: none;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.skills .container .card p.tit {
+    text-align: right;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.skills .circles span {
+    border: 1px solid #777;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 3px;
+    display: inline-block;
+}
+
+.skills .circles span:nth-of-type(2) {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.skills .circles {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.skills .skill-cont .bars h2 {
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.skills .skill-cont .bar-back {
+    background-color: #dedadc;
+    height: 30px;
+    margin-bottom: 40px;
+}
+
+.skills .bar-back span {
+    background-color: var(--main-color);
+    display: inline-block;
+    height: 30px;
+    position: relative;
+}
+
+.skills .skill-cont span::before {
+    position: absolute;
+    content: attr(data-prg);
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    right: -25px;
+    top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .skill-cont span::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    border-color: black transparent transparent ;
+    right: -10px;
+    top: -22px;
+}
+
+@media (min-width: 786px) {
+    .skills .container .card {
+        flex-direction: row;
+        text-align: left;
+    }
+    .skills .container .card .image {
+        margin-right: 50px;
+    }
+    .skills .container .card p.tit {
+        text-align: right;
+    }
+}
+
+@media (min-width: 992px) {
+    .skills .container {
+        grid-template-columns: repeat(2, minmax(400px, 1fr));
+        gap: 50px;
+    }
+}
+
+
+
+

@@ -900,6 +900,7 @@ header nav .fa-bars {
     text-align: center;
     margin: 50px auto 20px;
     font-size: 21px;
+    padding: 0;
 }
 
 .pricing .container .contact + a {
@@ -913,3 +914,145 @@ header nav .fa-bars {
     margin: 15px auto;
 }
 
+.subscribe {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../images/subscribe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.subscribe::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+}
+
+.subscribe .container {
+    color: white;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .subscribe .container {
+        flex-direction: column;
+    }
+}
+
+.subscribe .container form {
+    display: flex;
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+}
+
+.subscribe .container input[type="email"] {
+    padding: 20px 20px 20px 50px;
+    background: none;
+    color: white;
+    border: 1px solid white;
+    border-right: none;
+    display: block;
+    width: calc(100% - 140px);    
+    caret-color: var(--main-color);
+}
+
+.subscribe .container i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    font-size: 25px;
+}
+.subscribe .container input[type="submit"] {
+    padding: 20px;
+    background-color: var(--main-color);
+    color: white;
+    width: 140px;
+    border: 1px solid white;
+    border-left: none;
+}
+
+.subscribe form input[type="email"]:focus, .subscribe form input[type="submit"]:focus {
+    outline: none;
+}
+
+.subscribe .text {
+    margin-left: 50px;
+    line-height: 2;
+}
+
+@media (max-width: 991px) {
+    .subscribe .text {
+        margin: 30px 0 0;
+    }
+}
+
+
+.contact {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.footer {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background-image: url(../images/subscribe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.footer .container {
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.footer::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+}
+
+.footer img {
+    margin-bottom: 45px;
+}
+
+.footer h2 {
+    margin: 15px auto;
+    font-weight: normal;
+    position: relative;
+}
+
+.footer h2::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 1px;
+    background-color: white;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer i {
+    margin: 20px 15px 60px;
+}
+
+.footer span {
+    color: var(--main-color);
+}

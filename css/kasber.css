@@ -659,7 +659,7 @@ header nav .fa-bars {
 
 .skills .container {
     display: grid;
-    grid-template-columns: repeat(1, minmax(400px, 1fr));
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -780,11 +780,136 @@ header nav .fa-bars {
 
 @media (min-width: 992px) {
     .skills .container {
-        grid-template-columns: repeat(2, minmax(400px, 1fr));
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
         gap: 50px;
     }
 }
 
+.quote {
+    background-image: url(../images/quote.jpg);
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+}
+
+.quote::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+}
+
+.quote .container {
+    position: relative;
+    color: white;
+    line-height: 1.4;
+    z-index: 2;
+}
+
+.quote .container q {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.pricing {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.pricing .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.pricing .cards .card {
+    text-align: center;
+    background-color: #fcfcfc;
+}
+
+.pricing .card .one {
+    padding: 40px 20px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    width: 100%;
+}
+
+.pricing .card .one h3 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.pricing .card .one p {
+    font-weight: 700;
+}
+
+.pricing .card .one p sup {
+    font-size: 35px;
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+.pricing .card .one span {
+    font-size: 60px;
+}
+
+.pricing .card .two {
+    border-bottom: 1px solid var(--main-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing .card .two p {
+    padding: 20px;
+    position: relative;
+}
+
+.pricing .card .two p:not(:last-of-type)::after {
+    position: absolute;
+    content: "";
+    width: 140px;
+    height: 1px;
+    background-color: var(--main-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 
+.pricing .card .three a {
+    color: black;
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    width: fit-content;
+    margin: 30px auto;
+}
+
+.pricing .container .contact {
+    text-align: center;
+    margin: 50px auto 20px;
+    font-size: 21px;
+}
+
+.pricing .container .contact + a {
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    width: fit-content;
+    display: block;
+    margin: 15px auto;
+}
 

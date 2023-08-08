@@ -996,10 +996,73 @@ header nav .fa-bars {
     }
 }
 
-
 .contact {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
+}
+
+.contact .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .content form {
+    flex-basis: 70%;
+}
+
+.contact .content form input,
+.contact .content form textarea {
+    display: block;
+    padding: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+    border: 1px solid #dedadc;
+}
+
+.contact .content form textarea {
+    height: 200px;
+}
+
+.contact .content form input[type="submit"] {
+    width: fit-content;
+    padding: 20px;
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    display: flex;
+    margin-left: auto;    
+    cursor: pointer;
+}
+
+.contact .content .text {
+    flex-basis: 25%;
+    line-height: 1.8;
+    color: #777;
+}
+
+.contact .content .text h2 {
+    color: black;
+    font-weight: normal;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact .content .text div:last-of-type {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+    .contact .content {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .contact .content form {
+        order: 2;
+    }
+    .contact .content .text {
+        text-align: center;
+    }
 }
 
 .footer {
